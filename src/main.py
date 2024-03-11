@@ -83,7 +83,7 @@ if __name__ == '__main__':
         test_X = embedder.transform(test_X)
                             
     if args.model == 'SLDA':
-        model = LinearDiscriminantAnalysis(solver='lsqr',shrinkage='auto') # Main difference between original paper code and here. Much faster version and easier to play around version of https://github.com/tyler-hayes/Deep_SLDA/blob/master/SLDA_Model.py with auto-tuned shrinkage. Originally was designed with streaming_sigma_update=True and lambda values as specified in the RanDumb paper, returns similar results (\pm 0.8)
+        model = LinearDiscriminantAnalysis(solver='lsqr',shrinkage='auto') # Main difference between original paper code and here. Much faster version and easier to play around version of https://github.com/tyler-hayes/Deep_SLDA/blob/master/SLDA_Model.py with auto-set shrinkage. Originally was designed with streaming_sigma_update=True and shrinkage (lambda) values as specified in the RanDumb paper, returns similar results (\pm 0.8)
         model.fit(train_X, train_y)
         preds = model.predict(test_X)
         matrix = confusion_matrix(test_y, preds) # Some datasets are imbalanced, so we calculate per class accuracy to get the average incremental accuracy
