@@ -83,7 +83,7 @@ if __name__ == '__main__':
         test_X = embedder.transform(test_X)
                             
     if args.model == 'SLDA':
-        oa = OAS(store_precision=False, assume_centered=False) # Very sample-efficient shrinkage estimator 
+        oa = OAS(assume_centered=False) # Very sample-efficient shrinkage estimator 
         model = LinearDiscriminantAnalysis(solver='lsqr', covariance_estimator=oa) # Main difference between original paper code and here. Faster, easier to play but roughly equivalent to the online version: https://github.com/tyler-hayes/Deep_SLDA/blob/master/SLDA_Model.py with better-set shrinkage. Tested against original online code with hparam search for shrinkage, returns similar results (\pm 0.8)
         model.fit(train_X, train_y)
         preds = model.predict(test_X)
