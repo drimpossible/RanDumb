@@ -1,6 +1,6 @@
 # RanDumb
  
-This repository contains easier-to-run, simplified code for the paper:
+This repository contains simplified code for the paper:
 
 **RanDumb: A Simple Approach that Questions the Efficacy of Continual Representation Learning**  
 [Ameya Prabhu*](https://drimpossible.github.io), [Shiven Sinha*](https://www.linkedin.com/in/shiven-sinha/), [Ponnurangam Kumaraguru](https://www.iiit.ac.in/people/faculty/PKguru/), [Philip Torr](https://www.robots.ox.ac.uk/~phst/), [Ozan Sener+](https://ozansener.net/), [Puneet Dokania+](https://puneetkdokania.github.io)
