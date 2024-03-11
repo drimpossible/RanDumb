@@ -59,7 +59,7 @@ var_list = {
 
 
 if __name__ == '__main__':
-    d = torchvision.datasets.CIFAR100(root='./data', train=True, download=True)
+    d = torchvision.datasets.CIFAR100(root='../data', train=True, download=True)
     train_X = d.data
     train_y = np.array(d.targets)
     mean, var = np.array(mean_list['CIFAR100'])[np.newaxis, :, np.newaxis, np.newaxis], np.array(var_list['CIFAR100'])[np.newaxis, :, np.newaxis, np.newaxis]
@@ -69,14 +69,14 @@ if __name__ == '__main__':
     np.save(f"cifar100_train_features_combined.npy", train_X_combined)
     np.save(f"cifar100_train_labels_combined.npy", train_y_combined)
 
-    d = torchvision.datasets.CIFAR100(root='./data', train=False, download=True)
+    d = torchvision.datasets.CIFAR100(root='../data', train=False, download=True)
     test_X = d.data
     test_y = np.array(d.targets)
     test_X, test_y = process_data(test_X, test_y, mean, var, color=True, flip=False)
     np.save(f"cifar100_test_features.npy", test_X)
     np.save(f"cifar100_test_labels.npy", test_y)
 
-    d = torchvision.datasets.CIFAR10(root='./data', train=True, download=True)
+    d = torchvision.datasets.CIFAR10(root='../data', train=True, download=True)
     train_X = d.data
     train_y = np.array(d.targets)
     mean, var = np.array(mean_list['CIFAR10'])[np.newaxis, :, np.newaxis, np.newaxis], np.array(var_list['CIFAR10'])[np.newaxis, :, np.newaxis, np.newaxis]
@@ -86,14 +86,14 @@ if __name__ == '__main__':
     np.save(f"cifar10_train_features_combined.npy", train_X_combined)
     np.save(f"cifar10_train_labels_combined.npy", train_y_combined)
 
-    d = torchvision.datasets.CIFAR10(root='./data', train=False, download=True)
+    d = torchvision.datasets.CIFAR10(root='../data', train=False, download=True)
     test_X = d.data
     test_y = np.array(d.targets)
     test_X, test_y = process_data(test_X, test_y, mean, var, color=True, flip=False)
     np.save(f"cifar10_test_features.npy", test_X)
     np.save(f"cifar10_test_labels.npy", test_y)
 
-    d = torchvision.datasets.MNIST(root='./data', train=True, download=True)
+    d = torchvision.datasets.MNIST(root='../data', train=True, download=True)
     train_X = d.data.numpy()
     train_y = np.array(d.targets)
     mean, var = np.array(mean_list['MNIST'])[np.newaxis, :, np.newaxis], np.array(var_list['MNIST'])[np.newaxis, :, np.newaxis]
@@ -101,7 +101,7 @@ if __name__ == '__main__':
     np.save(f"mnist_train_features.npy", train_X)
     np.save(f"mnist_train_labels.npy", train_y)
 
-    d = torchvision.datasets.MNIST(root='./data', train=False, download=True)
+    d = torchvision.datasets.MNIST(root='../data', train=False, download=True)
     test_X = d.data.numpy()
     test_y = np.array(d.targets)
     test_X, test_y = process_data(test_X, test_y, mean, var, color=False, flip=False)
@@ -150,7 +150,7 @@ if __name__ == '__main__':
     test_X_smol, test_y_smol = [], []
 
     for i in range(len(miniimagenet_classes)):
-        path = '<path_to_imagenet1k>/Imagenet/train/' + miniimagenet_classes[i] + '/'
+        path = '../data/Imagenet/train/' + miniimagenet_classes[i] + '/'
         # Load all images in this folder sequentially using glob
         for filename in glob.glob(path + '*.JPEG'):
             im = Image.open(filename)
@@ -159,7 +159,7 @@ if __name__ == '__main__':
             train_X_smol.append(np.array(im_smol)[np.newaxis, ...])
             train_y_smol.append(i)
 
-        path = '<path_to_imagenet1k>/Imagenet/val/' + miniimagenet_classes[i] + '/'
+        path = '../data/Imagenet/val/' + miniimagenet_classes[i] + '/'
         # Load all images in this folder sequentially using glob
         for filename in glob.glob(path + '*.JPEG'):
             im = Image.open(filename)
