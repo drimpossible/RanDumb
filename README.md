@@ -39,7 +39,7 @@ Additional details and default hyperparameters can be found in `parse_args` func
   
 - Script to run RanDumb experiments given in `scripts/runall.sh`
 
-##### If you discover any bugs in the code please contact me, I will cross-check them with my nightmares. 
+. 
 
 **Notes:** Code given here is not online. Explanation below for why it does not vary from an online version. 
  
@@ -47,6 +47,8 @@ Additional details and default hyperparameters can be found in `parse_args` func
 - **Shrinkage estimation:** We want the shrinked covariance. Simple way is hyperparameter search over shrinkage parameters, just like other CL methods :)
 
 This code reaches similar performance as my original (ugly, ginormous) implementation (within ±0.8%), which was entangled with 10s of traditional methods from which I chose this. They are not needed for reproducing RanDumb.
+
+#### If you discover any bugs in the code please contact me, I will cross-check them with my nightmares
 
 ## Citation
 
