@@ -11,7 +11,7 @@ def parse_args():
     parser.add_argument('--model', type=str, default='SLDA', choices=['SLDA', 'NCM'], help='Model')
     parser.add_argument('--augment', action='store_true', help='Use RandomFlip Augmentation')
     parser.add_argument('--embed', action='store_true', help='Use embedding projection')
-    parser.add_argument('--embed_mode', type='str', default='RanDumb', choices=['RanDumb','RanPAC'], help='Choice of embedding')
+    parser.add_argument('--embed_mode', type=str, default='RanDumb', choices=['RanDumb','RanPAC'], help='Choice of embedding')
     parser.add_argument('--embed_dim', type=int, default=10000, help='Embedding dimension')
     # Default args
     parser.add_argument('--feature_path', type=str, default='../feats/', help='Path to features')
