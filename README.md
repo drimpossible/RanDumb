@@ -27,7 +27,15 @@ python get_feats_vit.py
 ```
 $ python main.py --dataset cifar100 --model SLDA --augment --embed --embed_mode RanDumb --embed_dim 25000
 ```
-Arguments you can freely tweak and default hyperparameters are given in the `parse_args` function in `main.py`
+
+Arguments you can freely tweak given a dataset and model: 
+  - Use RanDumb or RanPAC embedding function (`--embed_mode`)
+  - Embedding Dimension (`--embed_dim`)
+  - Use Flip Augmentation (`--augment`)
+  - Switch mahalanobis distance on/off (`--model SLDA` or `--model NCM`)
+  - Switch embedding on/off (`--embed`) 
+
+Additional details and default hyperparameters can be found in `parse_args` function in `src/main.py` 
   
 ### Results
 
