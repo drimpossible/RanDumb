@@ -33,10 +33,12 @@ Arguments you can freely tweak and default hyperparameters are given in the `par
 
 ##### If you discover any bugs in the code please contact me, I will cross-check them with my nightmares. 
 
-**Notes:** Code given here is not online. Explanation below for why it does not vary from an online version. This code reaches similar performance as my original (ugly, ginormous) implementation entangled with 100s of traditional methods which are not needed for reproducing RanDumb (±0.8%).
+**Notes:** Code given here is not online. Explanation below for why it does not vary from an online version. 
  
 - **Computing covariance:** It is an exact online rank-1 update to compute empirical covariance. Online updates are very slow, but this calculation is exact!
 - **Shrinkage estimation:** We want the shrinked covariance. Simple way is hyperparameter search over shrinkage parameters, just like other CL methods :)
+
+This code reaches similar performance as my original (ugly, ginormous) implementation (within ±0.8%), which was entangled with 10s of traditional methods from which I chose this. They are not needed for reproducing RanDumb.
 
 ## Citation
 
