@@ -37,8 +37,7 @@ Arguments you can freely tweak given a dataset and model:
 
 Additional details and default hyperparameters can be found in `parse_args` function in `src/main.py` 
   
-### Results
-
+- Script to run RanDumb experiments given in `scripts/runall.sh`
 
 ##### If you discover any bugs in the code please contact me, I will cross-check them with my nightmares. 
 
