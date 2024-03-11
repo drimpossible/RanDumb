@@ -28,14 +28,12 @@ $ python main.py --dataset cifar100 --model SLDA --augment --embed --embed_mode 
 ```
 Arguments you can freely tweak and default hyperparameters are given in the `parse_args` function in `main.py`
   
-- Note that this code estimates the covariance matrix in one-go, as it is too slow to run the sample-by-sample SLDA.
-
 ### Results
 
 
 ##### If you discover any bugs in the code please contact me, I will cross-check them with my nightmares. 
 
-**Notes:** Code given here is not online. Explanation below for why it does not vary from an online version. This code reaches similar performance as my original (ugly, ginormous) implementations of 100s of traditional methods which are not needed for reproducing RanDumb (±0.8%).
+**Notes:** Code given here is not online. Explanation below for why it does not vary from an online version. This code reaches similar performance as my original (ugly, ginormous) implementation entangled with 100s of traditional methods which are not needed for reproducing RanDumb (±0.8%).
  
 - **Computing covariance:** It is an exact online rank-1 update to compute empirical covariance. Online updates are very slow, but this calculation is exact!
 - **Shrinkage estimation:** We want the shrinked covariance. Simple way is hyperparameter search over shrinkage parameters, just like other CL methods :)
