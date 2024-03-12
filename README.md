@@ -41,10 +41,11 @@ Additional details and default hyperparameters can be found in `parse_args` func
 
 **Notes:** Code given here is not online. Explanation below for why it does not vary from an online version. 
  
-- **Computing covariance:** It is an exact online rank-1 update to compute empirical covariance. Online updates are very slow, but this calculation is exact, i.e., no difference!
-- **Shrinkage estimation:** We want the shrinked covariance. We use OAS method to obtain shrinkage parameters, which is a function of the empirical covariance matrix.
+- **Computing covariance:** It is an exact rank-1 update to compute empirical covariance, so the matrix should be the same. (Also the online code is very slow to run)!
+- **Shrinkage estimation:** We want the shrinked covariance. We use OAS method to obtain shrinkage parameters, but note that those parameters are a function of the empirical covariance matrix and again can be perfectly estimated online.
+- **No lamda used when inverting:** We want to make it hyperparameter optimization free (hparam optimization is not nice), by $lambda=0$ when inverting the covariance matrix-- no ridge regression style stuff here. Hence, this code sometimes gets *slightly* worse results than original code used for the paper.
 
-This code reaches similar performance as my original (ugly, ginormous) implementation (within ±0.8%), which was entangled with 10s of traditional methods from which I chose this. They are not needed for reproducing RanDumb.
+Overall, this code reaches similar performance but is far more hackable-- my original (ugly, ginormous) implementation (within ±0.8%), which was entangled with 10s of traditional methods from which I chose this particular combination of kernel and classifier. 
 
 #### If you discover any bugs in the code please contact me, I will cross-check them with my nightmares.
 
