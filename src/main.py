@@ -1,6 +1,7 @@
 import os, argparse, logging
 import numpy as np
 from sklearn.metrics import confusion_matrix
+from sklearn.covariance import OAS
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.neighbors import NearestCentroid
 from sklearn.kernel_approximation import RBFSampler
