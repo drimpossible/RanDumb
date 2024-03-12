@@ -45,7 +45,7 @@ Additional details and default hyperparameters can be found in `parse_args` func
 - **Shrinkage estimation:** We want the shrinked covariance. We use OAS method to obtain shrinkage parameters, but note that those parameters are a function of the empirical covariance matrix and again can be perfectly estimated online.
 - **No lamda used when inverting:** We want to make it hyperparameter optimization free (hparam optimization is not nice), by $lambda=0$ when inverting the covariance matrix-- no ridge regression style stuff here. Hence, this code sometimes gets *slightly* worse results than original code used for the paper.
 
-Overall, this code reaches similar performance but is far more hackable-- my original (ugly, ginormous) implementation (within ±0.8%), which was entangled with 10s of traditional methods from which I chose this particular combination of kernel and classifier. 
+Overall, this code reaches similar performance (within ±0.8%) but is far more hackable-- my original (ugly, ginormous) implementation was entangled with my implementations of many many traditional kernels/online methods from which I chose this particular combination of kernel and classifier. 
 
 #### If you discover any bugs in the code please contact me, I will cross-check them with my nightmares.
 
