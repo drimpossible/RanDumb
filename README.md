@@ -41,8 +41,8 @@ Additional details and default hyperparameters can be found in `parse_args` func
 
 **Notes:** Code given here is not online. Explanation below for why it does not vary from an online version. 
  
-- **Computing covariance:** It is an exact online rank-1 update to compute empirical covariance. Online updates are very slow, but this calculation is exact!
-- **Shrinkage estimation:** We want the shrinked covariance. Simple way is hyperparameter search over shrinkage parameters, just like other CL methods :)
+- **Computing covariance:** It is an exact online rank-1 update to compute empirical covariance. Online updates are very slow, but this calculation is exact, i.e., no difference!
+- **Shrinkage estimation:** We want the shrinked covariance. We use OAS method to obtain shrinkage parameters, which is a function of the empirical covariance matrix.
 
 This code reaches similar performance as my original (ugly, ginormous) implementation (within ±0.8%), which was entangled with 10s of traditional methods from which I chose this. They are not needed for reproducing RanDumb.
 
