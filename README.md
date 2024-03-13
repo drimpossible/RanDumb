@@ -10,7 +10,7 @@ This repository contains simplified code for the paper:
 [[Bibtex](https://github.com/drimpossible/RanDumb/#citation)]
 
 <p align="center">
-<a href="url"><img src="https://github.com/drimpossible/GDumb/blob/main/Pull.png" height="300" width="381" ></a>
+<a href="url"><img src="https://github.com/drimpossible/RanDumb/blob/main/Pull.png" height="200" width="251" ></a>
 </p>
 
 ## Libraries and Data Setup
