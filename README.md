@@ -9,6 +9,10 @@ This repository contains simplified code for the paper:
 [[Slides]()]
 [[Bibtex](https://github.com/drimpossible/RanDumb/#citation)]
 
+<p align="center">
+<a href="url"><img src="https://github.com/drimpossible/GDumb/blob/main/Pull.png" height="300" width="381" ></a>
+</p>
+
 ## Libraries and Data Setup
 
 * Install all requirements required to run the code on a Python 3.x by:
