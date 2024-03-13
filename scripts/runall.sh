@@ -187,45 +187,53 @@ python main.py --model SLDA --dataset vitbi1k_imagenet-a
 python main.py --model SLDA --dataset vitbi1k_cub
 python main.py --model SLDA --dataset vitbi1k_omnibenchmark
 python main.py --model SLDA --dataset vitbi1k_vtab
+python main.py --model SLDA --dataset vitbi1k_cars
 python main.py --model SLDA --dataset vitbi21k_cifar100
 python main.py --model SLDA --dataset vitbi21k_imagenet-r
 python main.py --model SLDA --dataset vitbi21k_imagenet-a
 python main.py --model SLDA --dataset vitbi21k_cub
 python main.py --model SLDA --dataset vitbi21k_omnibenchmark
 python main.py --model SLDA --dataset vitbi21k_vtab
+python main.py --model SLDA --dataset vitbi21k_cars
 python main.py --augment --model SLDA --dataset vitbi1k_cifar100
 python main.py --augment --model SLDA --dataset vitbi1k_imagenet-r
 python main.py --augment --model SLDA --dataset vitbi1k_imagenet-a
 python main.py --augment --model SLDA --dataset vitbi1k_cub
 python main.py --augment --model SLDA --dataset vitbi1k_omnibenchmark
 python main.py --augment --model SLDA --dataset vitbi1k_vtab
+python main.py --augment --model SLDA --dataset vitbi1k_cars
 python main.py --augment --model SLDA --dataset vitbi21k_cifar100
 python main.py --augment --model SLDA --dataset vitbi21k_imagenet-r
 python main.py --augment --model SLDA --dataset vitbi21k_imagenet-a
 python main.py --augment --model SLDA --dataset vitbi21k_cub
 python main.py --augment --model SLDA --dataset vitbi21k_omnibenchmark
 python main.py --augment --model SLDA --dataset vitbi21k_vtab
+python main.py --augment --model SLDA --dataset vitbi21k_cars
 python main.py --model NCM --dataset vitbi1k_cifar100
 python main.py --model NCM --dataset vitbi1k_imagenet-r
 python main.py --model NCM --dataset vitbi1k_imagenet-a
 python main.py --model NCM --dataset vitbi1k_cub
 python main.py --model NCM --dataset vitbi1k_omnibenchmark
 python main.py --model NCM --dataset vitbi1k_vtab
+python main.py --model NCM --dataset vitbi1k_cars
 python main.py --model NCM --dataset vitbi21k_cifar100
 python main.py --model NCM --dataset vitbi21k_imagenet-r
 python main.py --model NCM --dataset vitbi21k_imagenet-a
 python main.py --model NCM --dataset vitbi21k_cub
 python main.py --model NCM --dataset vitbi21k_omnibenchmark
 python main.py --model NCM --dataset vitbi21k_vtab
+python main.py --model NCM --dataset vitbi21k_cars
 python main.py --augment --model NCM --dataset vitbi1k_cifar100
 python main.py --augment --model NCM --dataset vitbi1k_imagenet-r
 python main.py --augment --model NCM --dataset vitbi1k_imagenet-a
 python main.py --augment --model NCM --dataset vitbi1k_cub
 python main.py --augment --model NCM --dataset vitbi1k_omnibenchmark
 python main.py --augment --model NCM --dataset vitbi1k_vtab
+python main.py --augment --model NCM --dataset vitbi1k_cars
 python main.py --augment --model NCM --dataset vitbi21k_cifar100
 python main.py --augment --model NCM --dataset vitbi21k_imagenet-r
 python main.py --augment --model NCM --dataset vitbi21k_imagenet-a
 python main.py --augment --model NCM --dataset vitbi21k_cub
 python main.py --augment --model NCM --dataset vitbi21k_omnibenchmark
 python main.py --augment --model NCM --dataset vitbi21k_vtab
+python main.py --augment --model NCM --dataset vitbi21k_cars
