@@ -47,7 +47,7 @@ Additional details and default hyperparameters can be found in `parse_args` func
  
 - **Computing covariance:** It is an exact rank-1 update to compute empirical covariance, so the matrix should be the same. (Also the online code is very slow to run)!
 - **Shrinkage estimation:** We want the shrinked covariance. We use OAS method to obtain shrinkage parameters, but note that those parameters are a function of the empirical covariance matrix and again can be perfectly estimated online.
-- **No lambda used when inverting:** Goal is to be hyperparameter optimization free (it is not nice to do in CL, can write a paper about gains from hparam optimization), we can make it hparam free by setting $lambda=0$ when inverting the covariance matrix-- no ridge regression style stuff here. This change leads to *slightly* worse results than original code used for the paper.
+- **No lambda used when inverting:** Ideally, one would be hyperparameter optimization free (it is not nice to do in CL, can write a paper about gains from hparam optimization), we can make it hparam free by setting $lambda=0$ when inverting the covariance matrix-- no ridge regression style stuff here. This change leads to *slightly* worse results than original code used for the paper. Original model is provided in `src/legacy_model.py` for reproducibility.
 
 Overall, this code reaches similar performance (within ±0.8%) but is far more hackable-- my original (ugly, ginormous) implementation was entangled with my implementations of many many traditional kernels/online methods from which I chose this particular combination of kernel and classifier. 
 
